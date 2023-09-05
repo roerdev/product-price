@@ -75,8 +75,8 @@ class PriceServiceImplTest {
         when(priceMapper.priceToPriceDTO(any())).thenReturn(PriceDTO.builder().id(priceId).build());
 
         Optional<PriceDTO> result = priceService.getPriceById(priceId);
-
-        assertEquals(1L, result.orElse(null).getId());
+        var resultDTO = result.orElse(null) == null ? null : result.get().getId();
+        assertEquals(1L, resultDTO);
     }
 
     @Test
@@ -174,7 +174,8 @@ class PriceServiceImplTest {
 
         Optional<PriceDTO> price = priceService.getPriceByDateAndProductAndChain(new Date(), 1L, "XYZ");
 
-        assertEquals(price2.getId(), price.orElse(null).getId());
+        var resultDTO = price.orElse(null) == null ? null : price.get().getId();
+        assertEquals(price2.getId(), resultDTO);
     }
 
 }
