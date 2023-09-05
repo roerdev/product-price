@@ -16,7 +16,7 @@ public class DatesUtil {
     public static List<Price> orderByDateDifferenceAscending(List<Price> priceList) {
 
         List<Price> modifiableList = new ArrayList<>(priceList);
-        Collections.sort(modifiableList, new Comparator<Price>() {
+        Collections.sort(modifiableList, new Comparator<>() {
             @Override
             public int compare(Price price1, Price price2) {
                 long daysDifference1 = ChronoUnit.DAYS.between(price1.getStartDate().toInstant(), price1.getEndDate().toInstant());

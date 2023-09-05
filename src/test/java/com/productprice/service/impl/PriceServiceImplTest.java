@@ -7,8 +7,6 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.productprice.domain.Brand;
 import com.productprice.domain.Price;
 import com.productprice.dto.PriceDTO;
-import com.productprice.mapper.BrandMapper;
-import com.productprice.mapper.BrandMapperImpl;
 import com.productprice.mapper.PriceMapper;
 import com.productprice.mapper.PriceMapperImpl;
 import com.productprice.repository.BrandRepository;
@@ -45,9 +43,6 @@ class PriceServiceImplTest {
 
     @Spy
     private PriceMapper priceMapper = new PriceMapperImpl();
-
-    @Spy
-    private BrandMapper brandMapper = new BrandMapperImpl();
 
     @Mock
     private BrandRepository brandRepository;
@@ -159,7 +154,7 @@ class PriceServiceImplTest {
 
         Optional<PriceDTO> price = priceService.getPriceByDateAndProductAndChain(new Date(), 1L, "XYZ");
 
-        assertEquals(priceDTO1, price.get());
+        assertEquals(priceDTO1, price.orElse(null));
     }
 
     @Test
@@ -179,7 +174,7 @@ class PriceServiceImplTest {
 
         Optional<PriceDTO> price = priceService.getPriceByDateAndProductAndChain(new Date(), 1L, "XYZ");
 
-        assertEquals(price2.getId(), price.get().getId());
+        assertEquals(price2.getId(), price.orElse(null).getId());
     }
 
 }
