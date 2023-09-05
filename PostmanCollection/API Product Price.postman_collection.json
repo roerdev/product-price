@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "91d6f14e-cfb4-4d2f-a517-813b51abdf37",
+		"name": "API Product Price",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16761772",
+		"_collection_link": "https://speeding-eclipse-352616.postman.co/workspace/NTT-DATA~eb79af09-1efd-4743-9ef6-70ef4be7c2e6/collection/16761772-91d6f14e-cfb4-4d2f-a517-813b51abdf37?action=share&source=collection_link&creator=16761772"
+	},
+	"item": [
+		{
+			"name": "PRUEBA 1: 10:00 día 14",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"API responde correctamente\", function () { \r",
+							"    pm.response.to.be.ok; \r",
+							"    pm.response.to.be.withBody; \r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"API responde objeto corrrecto\", function () {\r",
+							"    id = pm.response.json().id;\r",
+							"    chain = pm.response.json().brandId.description;\r",
+							"    product = pm.response.json().productId;\r",
+							"    pm.expect(id).to.equal(1);\r",
+							"    pm.expect(chain).to.equal(\"XYZ\");\r",
+							"    pm.expect(product).to.equal(35455);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/prices/2020-06-14 10:00:00/35455/XYZ",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"prices",
+						"2020-06-14 10:00:00",
+						"35455",
+						"XYZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRUEBA 2: 16:00 día 14",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"API responde correctamente\", function () { \r",
+							"    pm.response.to.be.ok; \r",
+							"    pm.response.to.be.withBody; \r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"API responde objeto corrrecto\", function () {\r",
+							"    id = pm.response.json().id;\r",
+							"    chain = pm.response.json().brandId.description;\r",
+							"    product = pm.response.json().productId;\r",
+							"    pm.expect(id).to.equal(2);\r",
+							"    pm.expect(chain).to.equal(\"XYZ\");\r",
+							"    pm.expect(product).to.equal(35455);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/prices/2020-06-14 16:00:00/35455/XYZ",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"prices",
+						"2020-06-14 16:00:00",
+						"35455",
+						"XYZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRUEBA 3: 21:00 día 14",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"API responde correctamente\", function () { \r",
+							"    pm.response.to.be.ok; \r",
+							"    pm.response.to.be.withBody; \r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"API responde objeto corrrecto\", function () {\r",
+							"    id = pm.response.json().id;\r",
+							"    chain = pm.response.json().brandId.description;\r",
+							"    product = pm.response.json().productId;\r",
+							"    pm.expect(id).to.equal(1);\r",
+							"    pm.expect(chain).to.equal(\"XYZ\");\r",
+							"    pm.expect(product).to.equal(35455);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/prices/2020-06-14 21:00:00/35455/XYZ",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"prices",
+						"2020-06-14 21:00:00",
+						"35455",
+						"XYZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRUEBA 4: 10:00 día 15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"API responde correctamente\", function () { \r",
+							"    pm.response.to.be.ok; \r",
+							"    pm.response.to.be.withBody; \r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"API responde objeto corrrecto\", function () {\r",
+							"    id = pm.response.json().id;\r",
+							"    chain = pm.response.json().brandId.description;\r",
+							"    product = pm.response.json().productId;\r",
+							"    pm.expect(id).to.equal(3);\r",
+							"    pm.expect(chain).to.equal(\"XYZ\");\r",
+							"    pm.expect(product).to.equal(35455);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/prices/2020-06-15 10:00:00/35455/XYZ",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"prices",
+						"2020-06-15 10:00:00",
+						"35455",
+						"XYZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRUEBA 5: 21:00 día 16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"API responde correctamente\", function () { \r",
+							"    pm.response.to.be.ok; \r",
+							"    pm.response.to.be.withBody; \r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"API responde objeto corrrecto\", function () {\r",
+							"    id = pm.response.json().id;\r",
+							"    chain = pm.response.json().brandId.description;\r",
+							"    product = pm.response.json().productId;\r",
+							"    pm.expect(id).to.equal(4);\r",
+							"    pm.expect(chain).to.equal(\"XYZ\");\r",
+							"    pm.expect(product).to.equal(35455);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/prices/2020-06-16 21:00:00/35455/XYZ",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"prices",
+						"2020-06-16 21:00:00",
+						"35455",
+						"XYZ"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

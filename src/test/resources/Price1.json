@@ -1,0 +1,14 @@
+{
+  "id": 2,
+  "brandId": {
+    "id": 19,
+    "description": "test_fe3567db9b40"
+  },
+  "startDate": "2023-09-01 12:04:55",
+  "endDate": "2023-09-30 22:00:46",
+  "priceList": 75,
+  "productId": 67,
+  "priority": 0,
+  "price": 28.58,
+  "curr": "EUR"
+}
