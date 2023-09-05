@@ -16,4 +16,3 @@ services:
 networks:
   default:
     driver: bridge
-    name: api-prueba
