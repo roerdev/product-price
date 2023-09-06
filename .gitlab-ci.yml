@@ -1,3 +1,5 @@
+image: maven:3.8-jdk-11
+
 stages:
   - build
   - test
@@ -6,7 +8,10 @@ build:
   stage: build
   script:
     - echo "Construyendo proyecto Springboot..."
-    - mvn clean package
+    - mvn package
+  artifacts:
+    paths:
+      - target/*.jar
 
 
 test:
