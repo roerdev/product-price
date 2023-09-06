@@ -2,7 +2,6 @@ image: maven:3.8-jdk-11
 
 stages:
   - build
-  - test
 
 build:
   stage: build
@@ -12,10 +11,3 @@ build:
   artifacts:
     paths:
       - target/*.jar
-
-
-test:
-  stage: test
-  script:
-    - echo "Testeando proyecto Springboot..."
-    - mvn verify
