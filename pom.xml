@@ -119,6 +119,8 @@
 						<exclude>com/productprice/mapper/**/*</exclude>
 						<!-- Config -->
 						<exclude>com/productprice/config/**/*</exclude>
+						<!-- Handler Exception -->
+						<exclude>com/productprice/exceptions/handler/**/*</exclude>
 					</excludes>
 				</configuration>
 				<executions>
